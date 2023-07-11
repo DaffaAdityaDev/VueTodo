@@ -93,13 +93,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <HelloWorld msg="Todo List" />
-    </div>
-  </header>
+
 
   <main>
+    <HelloWorld msg="Todo List" />
     <Form />
     <Timer :time="currentSelectedTimer" :todo="currentTodo"/>
     <ListItem v-for="item in TodoList" :key="item.id" :item="item" />
@@ -118,20 +115,20 @@ header {
 }
 
 @media (min-width: 1024px) {
-  header {
-    display: flex;
+  /* header { */
+    /* display: flex;
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
-  }
+  } */
 
   .logo {
     margin: 0 2rem 0 0;
   }
 
-  header .wrapper {
+  /* header .wrapper {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
-  }
+  } */
 }
 </style>

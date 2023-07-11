@@ -14,6 +14,12 @@ defineProps({
 </template>
 
 <style scoped>
+
+.greetings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 h1 {
   font-weight: 500;
   font-size: 2.6rem;
