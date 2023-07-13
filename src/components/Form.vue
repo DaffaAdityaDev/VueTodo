@@ -11,7 +11,6 @@
     </form>
 </template>
 
-
 <script setup>
 import { ref } from 'vue';
 
@@ -27,7 +26,7 @@ const addItem = () => {
         new CustomEvent('addItem', {
         detail: {
             name: form.value.name,
-            time: form.value.timeSecond + form.value.timeMinute + form.value.timeHour,
+            time: form.value.timeSecond + form.value.timeMinute * 60 + form.value.timeHour * 3600,
         },
         })
     );
